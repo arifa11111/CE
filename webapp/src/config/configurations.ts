@@ -1,13 +1,13 @@
 /*
  *Copyright 2018 T Mobile, Inc. or its affiliates. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); You may not use
+ * Licensed under the Apache License, Version 2.0 (the ""License""); You may not use
  * this file except in compliance with the License. A copy of the License is located at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * or in the "license" file accompanying this file. This file is distributed on
- * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or
+ * or in the ""license"" file accompanying this file. This file is distributed on
+ * an ""AS IS"" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or
  * implied. See the License for the specific language governing permissions and
  * limitations under the License.
  */
@@ -21,11 +21,11 @@ export const CONFIGURATIONS = {
   required: {
     APP_NAME: 'Paladin Cloud',
     domains: {
-      PROD_BASE_URL: '', // Expected values: domain where the API is deployed, ex: http://beta.pacbot.com/api
-      STG_BASE_URL: '', // Expected values: domain where the API is deployed, ex: http://stgbeta.pacbot.com/api
-      DEV_BASE_URL: '', // Expected values: domain where the API is deployed, ex: http://devbeta.pacbot.com/api
-      CLOUD_BASE_URL: '', // Expected values: domain where the API is deployed
-    },
+        PROD_BASE_URL: 'https://dev.paladincloud.io/api', // Expected values: domain where the API is deployed, ex: http://beta.pacbot.com/api
+        STG_BASE_URL: 'https://dev.paladincloud.io/api', // Expected values: domain where the API is deployed, ex: http://stgbeta.pacbot.com/api
+        DEV_BASE_URL: 'https://dev.paladincloud.io/api', // Expected values: domain where the API is deployed, ex: http://devbeta.pacbot.com/api
+        CLOUD_BASE_URL: 'https://dev.paladincloud.io/api', // Expected values: domain where the API is deployed
+      },
     featureModules: {
       COMPLIANCE_MODULE: true, // Expected values: true || false
       ASSETS_MODULE: true, // Expected values: true || false
@@ -42,16 +42,20 @@ export const CONFIGURATIONS = {
         clientId: '' // Expected values: Value expected if 'AD_AUTHENTICATION' is true
       },
       cognitoConfig: {
-        sso_api_username: '',
-        sso_api_pwd: '',
+        sso_api_username: '1tdhqbf25r0qun8a34rbd4djpt',
+        sso_api_pwd: 'bfb8lbbf8vc31ro2jl5h318erfaronac9502sgt8hb2iq3ms5oa',
 
-        loginURL: '',
+        loginURL: 'https://ossdevpaladin.auth.us-east-1.amazoncognito.com/login?' +
+          'client_id=1tdhqbf25r0qun8a34rbd4djpt&response_type=code&scope=openid+profile&' +
+          'redirect_uri=http://localhost:4200/callback',
 
-        redirectURL: '',
+        redirectURL: 'http://localhost:4200/callback',
 
-        cognitoTokenURL: '',
+        cognitoTokenURL: 'https://ossdevpaladin.auth.us-east-1.amazoncognito.com/oauth2/token',
 
-        logout: ''
+        logout: 'https://ossdevpaladin.auth.us-east-1.amazoncognito.com/login?' +
+          'client_id=1tdhqbf25r0qun8a34rbd4djpt&response_type=code&scope=openid+profile&' +
+          'redirect_uri=http://localhost:4200/callback'
       }
     },
     pacmanIssue: {
